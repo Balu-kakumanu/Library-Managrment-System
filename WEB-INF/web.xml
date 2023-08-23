@@ -1,0 +1,27 @@
+<web-app>
+
+<servlet>
+	<servlet-name>Captcha</servlet-name>
+	<display-name>CaptchaGeneration</display-name>
+	<servlet-class>com.captcha.CaptchaGeneration</servlet-class>
+	<init-param> 
+		<description>passing height</description> 
+		<param-name>height</param-name> 
+		<param-value>30</param-value> 
+	</init-param> 
+	<init-param> 
+		<description>passing width</description> 
+		<param-name>width</param-name> 
+		<param-value>120</param-value> 
+	</init-param> 
+</servlet>
+
+<servlet-mapping>
+	<servlet-name>Captcha</servlet-name>
+	<url-pattern>/Captcha.jpg</url-pattern>
+</servlet-mapping>
+
+<listener>
+	<listener-class>ConnectionDao</listener-class>
+</listener>
+</web-app>
